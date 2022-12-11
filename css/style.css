@@ -113,3 +113,44 @@ body{
 padding: 20px 0 0 60px;
    width: 50%;
 }
+
+/*REGISTRO*/
+
+#cuerpo{
+   background-image: url("/img/acatenango-view-g9ee70466d_1920.jpg");
+   background-position: 0px;
+   background-size: cover;
+}
+
+#contenido{
+   padding-top: 3%;
+}
+
+#formBody{   
+   background: rgba(0, 0, 0, 0.3);
+   display: flex;
+   flex-direction: column;   
+   justify-content: center;
+   align-items: center;
+   margin: 0 15em;
+   border-radius: 10px; 
+   padding-bottom: 20px;  
+}
+
+#formBody h2{
+   color: white;
+}
+
+#formulario {   
+   color: white;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   column-gap: 10rem;   
+   grid-auto-rows: minmax(100px, auto);
+}
+
+#registrate{
+   color: white;
+   border-style: none;
+   cursor: pointer;
+}
