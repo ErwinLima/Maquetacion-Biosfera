@@ -133,7 +133,7 @@ padding: 20px 0 0 60px;
    justify-content: center;
    align-items: center;
    margin: 0 15em;
-   border-radius: 10px; 
+   border-radius: 30px; 
    padding-bottom: 20px;  
 }
 
@@ -153,4 +153,8 @@ padding: 20px 0 0 60px;
    color: white;
    border-style: none;
    cursor: pointer;
+}
+
+.formItem input{
+   width: 20rem;
 }
