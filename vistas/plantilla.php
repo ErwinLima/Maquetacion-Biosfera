@@ -28,6 +28,10 @@
         include "modulos/supe.php";
         $inicio = false;
        }
+       else if($ruta == "datos"){
+        include "modulos/datos.registro.php";
+        $inicio = false;
+       }
    }
    if ($inicio) {
     include 'modulos/mapa.php';

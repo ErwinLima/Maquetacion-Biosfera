@@ -5,14 +5,14 @@
     <div id="contenido">
         <div id="formBody">
             <h2>Registro de cuenta</h2>
-            <form action="" id="formulario">            
+            <form action="datos" id="formulario" method="POST">            
                 <div class="formItem">
                     <label for="fname">Nombre</label><br>
-                    <input type="text" id="fname" name="fname"><br>
+                    <input type="text" id="fname" name="username"><br>
                 </div>
                 <div class="formItem">
                     <label for="lname">Apellido</label><br>
-                    <input type="text" id="lname" name="lname"><br>
+                    <input type="text" id="lname" name="userlastname"><br>
                 </div>
                 <div class="formItem">
                     <label for="email">Correo</label><br>
@@ -28,10 +28,11 @@
                 </div>
                 <div class="formItem">
                     <label for="password">Repetir Contraseña</label><br>
-                    <input type="password" id="password" name="password"><br>
-                </div>                                
+                    <input type="password" id="password" name="password2"><br>
+                </div>       
+                <button type="submit"  class="button" id="registrate">Registrate</button>                         
             </form>
-            <input type="submit" value="Registrarse" class="button" id="registrate">
+
         </div>       
     
     </div>

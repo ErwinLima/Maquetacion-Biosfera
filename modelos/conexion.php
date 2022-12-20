@@ -1,19 +1,23 @@
 <?php
 
 class Conexion{
+    //variable para almacenar la conexion
     private $connection;
-
+    //constructor para probar la conexion
     public function __construct(){
-        $this->connection= new mysqli('localhost', 'root', '', 'test');
+        $connection= new mysqli('localhost', 'root', '', 'test');
     }
-
+    //esta funcion recibe los parametros del formulario de registro y los mete a la bd.
     public function insertInformation($nombre, $apellido, $correo, $clave, $ciudad){
-        $queryInsertion=$this->connection->query('INSERT INTO usuarios (nombre, apellido, correo, clave, ciudad) VALUES ('.$nombre.','.$apellido.','.$correo.','.$clave.','.$ciudad.');');
-        if($queryInsertion){
-            echo "Si se pudo";
+        $connection= new mysqli('localhost', 'root', '', 'test');
+        $queryInsertion=('INSERT INTO usuarios (nombre, apellido, correo, clave, ciudad) VALUES (\''.$nombre.'\',\''.$apellido.'\',\''.$correo.'\',\''.$clave.'\',\''.$ciudad.'\');');
+        $result=mysqli_query($connection,$queryInsertion);
+        if($result){
+            return true;
         }
         else{
-            echo "No se pudo";
+            return false;
         }
     }
+
 }
