@@ -9,6 +9,9 @@ html,body
 body{
     font-family: 'Montserrat', sans-serif!important;
 }
+#fa-solid{
+   margin-right: 2rem;
+}
 #social-sidebar {
     left: 0;
     position: fixed;
@@ -23,9 +26,8 @@ body{
    #social-sidebar a {
     background: rgba(0, 0, 0, .7);
     color: #fff;
-       text-decoration: none;
+   text-decoration: none;
     display: block;
-    height: 50px;
     width: 50px;  
     font-size: 24px;
     line-height: 50px;
@@ -117,7 +119,7 @@ padding: 20px 0 0 60px;
 /*REGISTRO*/
 
 #cuerpo{
-   background-image: url("/img/acatenango-view-g9ee70466d_1920.jpg");
+   background-image: url("../img/acatenango-view-g9ee70466d_1920.jpg");
    background-position: 0px;
    background-size: cover;
 }
@@ -157,4 +159,7 @@ padding: 20px 0 0 60px;
 
 .formItem input{
    width: 20rem;
+}
+#mapa_div{
+   overflow: hidden;
 }
