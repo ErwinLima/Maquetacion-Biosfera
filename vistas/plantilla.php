@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="vistas/css/normalize.css">
     <link rel="stylesheet" href="vistas/css/style.css">
     <title>Biosfera</title>
-    <?php$url = ruta::ctrRuta();?>
+    <?php $url = ruta::ctrRuta();?>
 </head>
 <body>
 

@@ -160,6 +160,17 @@ padding: 20px 0 0 60px;
 .formItem input{
    width: 20rem;
 }
+
+#formContent{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
 #mapa_div{
    overflow: hidden;
+}
+
+#registrate{
+   width: 20%;
 }
