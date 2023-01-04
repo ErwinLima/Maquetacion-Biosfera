@@ -19,5 +19,24 @@ class Conexion{
             return false;
         }
     }
-
+    static public function datosVentanaPrincipal($datoEspecifico){
+        $connection = new mysqli('localhost', 'root', '', 'test');
+        $queryVentanaPrincipal = ('SELECT TOP 1 * FROM datos_principal ORDER BY Id DESC;');
+        $result=mysqli_query($connection,$queryVentanaPrincipal);
+        if($result){
+            $row = mysqli_fetch_array($result);
+            if($row[$datoEspecifico] != NULL){
+                $devolucion = $row[$datoEspecifico];
+                return $devolucion;
+            }
+            else{
+                $devolucion = "No se pudo";
+                return $devolucion;
+            }
+        }
+        else{
+            $no="No se pudo concretar la operacion";
+            return $no;
+        }
+    }
 }

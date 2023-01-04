@@ -110,6 +110,7 @@ body{
    width: 30%;
    height: 100px;
    border-radius: 0px 0px 100px 0px ;
+   position: fixed;
   }
 #logo img{
 padding: 20px 0 0 60px;
@@ -160,6 +161,7 @@ padding: 20px 0 0 60px;
 .formItem input{
    width: 20rem;
 }
+<<<<<<< Updated upstream
 
 #formContent{
    display: flex;
@@ -167,6 +169,13 @@ padding: 20px 0 0 60px;
    align-items: center;
 }
 
+=======
+#info{
+   position: fixed;
+   bottom: 1%;
+   
+}
+>>>>>>> Stashed changes
 #mapa_div{
    overflow: hidden;
 }
