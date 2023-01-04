@@ -1,6 +1,6 @@
 <?php
 //requerimos conexion
-include 'modelos/conexion.php';
+include_once('modelos/conexion.php') ;
 //almacenamos en variables los datos enviados por el formulario
 $nombreForm=$_POST['username'];
 $apellidoForm=$_POST['userlastname'];
@@ -12,8 +12,8 @@ if($claveForm != $clave2){
     include 'verified.not.php';
 }else{
     //abrimos la conexion y hacemos el llamado, si se ejecuta perfectamente mostramos verfied.
-    $conexion = new Conexion;
-    
+    $conexion = new Conexion1();
+
     if($conexion->insertInformation($nombreForm,$apellidoForm,$correoForm,$claveForm,$ciudadForm)){//esta es una funcion de la clase conexion para insertar la informacion (veala detallada en conexion.php)
         include 'verified.php';
     }

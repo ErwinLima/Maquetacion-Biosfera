@@ -8,6 +8,10 @@ html,body
 }
 body{
     font-family: 'Montserrat', sans-serif!important;
+    scrollbar-width: none;
+}
+.mapa-plantilla{
+   
 }
 #fa-solid{
    margin-right: 2rem;
@@ -161,7 +165,6 @@ padding: 20px 0 0 60px;
 .formItem input{
    width: 20rem;
 }
-<<<<<<< Updated upstream
 
 #formContent{
    display: flex;
@@ -169,15 +172,13 @@ padding: 20px 0 0 60px;
    align-items: center;
 }
 
-=======
 #info{
    position: fixed;
    bottom: 1%;
-   
 }
->>>>>>> Stashed changes
 #mapa_div{
    overflow: hidden;
+   scrollbar-width: none;
 }
 
 #registrate{

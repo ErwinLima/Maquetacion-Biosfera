@@ -1,17 +1,17 @@
 <?php
 
-class Conexion{
+class Conexion1{
     //variable para almacenar la conexion
     private $connection;
     //constructor para probar la conexion
     public function __construct(){
-        $connection= new mysqli('localhost', 'root', '', 'test');
+        $this->connection= new mysqli('localhost', 'root', '', 'test');
     }
     //esta funcion recibe los parametros del formulario de registro y los mete a la bd.
     public function insertInformation($nombre, $apellido, $correo, $clave, $ciudad){
-        $connection= new mysqli('localhost', 'root', '', 'test');
-        $queryInsertion=('INSERT INTO usuarios (nombre, apellido, correo, clave, ciudad) VALUES (\''.$nombre.'\',\''.$apellido.'\',\''.$correo.'\',\''.$clave.'\',\''.$ciudad.'\');');
-        $result=mysqli_query($connection,$queryInsertion);
+        $connection2= new mysqli('localhost', 'root', '', 'test');
+        $queryInsertion=('INSERT INTO usuarios2 (nombre, apellido, correo, clave, ciudad) VALUES (\''.$nombre.'\',\''.$apellido.'\',\''.$correo.'\',aes_encrypt(\''.$clave.'\', \'prueba\'),\''.$ciudad.'\');');
+        $result=mysqli_query($connection2,$queryInsertion);
         if($result){
             return true;
         }
@@ -19,9 +19,9 @@ class Conexion{
             return false;
         }
     }
-    static public function datosVentanaPrincipal($datoEspecifico){
+     public function datosVentanaPrincipal($datoEspecifico){
         $connection = new mysqli('localhost', 'root', '', 'test');
-        $queryVentanaPrincipal = ('SELECT TOP 1 * FROM datos_principal ORDER BY Id DESC;');
+        $queryVentanaPrincipal = ('SELECT * FROM datos_principal ORDER by Id DESC LIMIT 1;');
         $result=mysqli_query($connection,$queryVentanaPrincipal);
         if($result){
             $row = mysqli_fetch_array($result);
