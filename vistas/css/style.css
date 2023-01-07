@@ -57,6 +57,133 @@ body{
     top: 50%;
     z-index: -1;
    }
+   /* ------------------------- */
+   /* POPUP */
+   /* ------------------------- */
+
+
+   .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 5%;
+      align-items: center;
+      justify-content: right;
+      display: flex;
+      visibility: hidden;
+   }
+
+   .overlay.active {
+      visibility: visible;
+   }
+   
+   .popup {
+      color: #fff;
+      background: rgba(0, 0, 0, .7);
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      padding: 20px;
+      text-align: center;
+      width: 220px;
+      height: 50%;
+      transition: .3s ease all;
+      transform: scale(0.7);
+      opacity: 0;
+      left: 100px;
+   }
+   .popup ul{
+      list-style: none;
+      padding: 0%;
+      line-height: 50px;
+      opacity: 0;
+   }
+
+   .popup h3 {
+      font-size: 25px;
+      font-weight: 600;
+      opacity: 0;
+      margin-bottom: 5px;
+   }
+
+   .formulario{
+      opacity: 0;
+   }
+
+   .formulario fieldset {
+      font-weight:300;
+      border: none;
+   }
+
+   .enlace {
+      color: #fff;
+      font-size: .6rem;
+      display: block;
+      text-align: left;
+      text-decoration: none;
+      padding-top: 3px;
+   }
+   .formulario a:last-child {text-align: center;}
+
+   .campo {
+      margin-top: 15px;
+   }
+   .campo label{
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 10px;
+   }
+   .input-text{     
+      border-radius: .5rem;
+      height: 1.7rem;
+      border: none;
+      width: 100%;
+      margin: 5px 0 0 0;
+   }
+   .btn-submit{
+      color: #fff;
+      background-color: #00B2FF;
+      border-radius: .5rem;
+      text-transform: uppercase;
+      width: 65%;
+      height: 1.7rem;
+      border: none;
+      cursor: pointer;
+      margin: 20px 0 1px 0;
+   }
+
+   /* ------------------------- */
+   /* ANIMACIONES */
+   /* ------------------------- */
+   .popup.active {	transform: scale(1); opacity: 1; }
+   .popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+   .popup.active .formulario { animation: entradaLista .8s ease .5s forwards; }
+   .popup.active ul { animation: entradaLista .8s ease .5s forwards; }
+   
+   @keyframes entradaTitulo {
+      from {
+         opacity: 0;
+         transform: translateY(-25px);
+      }
+   
+      to {
+         transform: translateY(0);
+         opacity: 1;
+      }
+   }
+   
+   @keyframes entradaLista {
+      from {
+         opacity: 0;
+         transform: translateY(25px);
+      }
+   
+      to {
+         transform: translateY(0);
+         opacity: 1;
+      }
+   }
    #datos-actuales ul{
     list-style: none;
    }
