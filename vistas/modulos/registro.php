@@ -5,34 +5,6 @@
     <div id="contenido">
         <div id="formBody">
             <h2>Registro de cuenta</h2>
-<<<<<<< Updated upstream
-            <form action="datos" id="formulario" method="POST">            
-                <div class="formItem">
-                    <label for="fname">Nombre</label><br>
-                    <input type="text" id="fname" name="username"><br>
-                </div>
-                <div class="formItem">
-                    <label for="lname">Apellido</label><br>
-                    <input type="text" id="lname" name="userlastname"><br>
-                </div>
-                <div class="formItem">
-                    <label for="email">Correo</label><br>
-                    <input type="text" id="email" name="email"><br>
-                </div>
-                <div class="formItem">
-                    <label for="city">Ciudad</label><br>
-                    <input type="text" id="city" name="city"><br>
-                </div>
-                <div class="formItem">
-                    <label for="password">Contraseña</label><br>
-                    <input type="password" id="password" name="password"><br>
-                </div>
-                <div class="formItem">
-                    <label for="password">Repetir Contraseña</label><br>
-                    <input type="password" id="password" name="password2"><br>
-                </div>       
-                <button type="submit"  class="button" id="registrate">Registrate</button>                         
-=======
             <form action="datos" method="POST" id="f1">    
                 <div id="formContent">
                     <div id="formulario" >
@@ -63,7 +35,6 @@
                     </div>
                     <button type="submit"  class="button" id="registrate">Registrate</button>                                               
                 </div>        
->>>>>>> Stashed changes
             </form>
 
         </div>       

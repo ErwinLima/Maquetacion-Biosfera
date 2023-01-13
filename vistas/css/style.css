@@ -125,11 +125,6 @@ padding: 20px 0 0 60px;
 }
 
 #contenido{
-<<<<<<< Updated upstream
-   padding-top: 8%;
-   display: flex;
-   justify-content: center;
-=======
    display: flex;
    padding-top: 8%;
    justify-content: center;
@@ -137,7 +132,6 @@ padding: 20px 0 0 60px;
 
 #f1{
    width: 100%;
->>>>>>> Stashed changes
 }
 
 #formBody{   
@@ -145,11 +139,7 @@ padding: 20px 0 0 60px;
    display: flex;
    flex-direction: column;   
    align-items: center;
-<<<<<<< Updated upstream
-   width: 75%;   
-=======
    width: 65%;
->>>>>>> Stashed changes
    border-radius: 30px; 
    padding-bottom: 20px;  
 }
@@ -164,19 +154,11 @@ padding: 20px 0 0 60px;
 #formulario {   
    color: white;
    display: grid;
-<<<<<<< Updated upstream
-   grid-template-columns: repeat(2, 1fr);   
-   column-gap: 10rem;   
-   grid-auto-rows: minmax(100px, auto);
-   width: 100%;
-   
-=======
    grid-template-columns: repeat(2, 1fr);
    column-gap: 10%;   
    grid-auto-rows: minmax(100px, auto);
    width: 100%;
    padding-left: 1.5%;
->>>>>>> Stashed changes
 }
 
 #registrate{
@@ -186,12 +168,6 @@ padding: 20px 0 0 60px;
 }
 
 .formItem input{
-<<<<<<< Updated upstream
-   width: 150%;
-}
-#mapa_div{
-   overflow: hidden;
-=======
    width: 94%;
 }
 
@@ -264,7 +240,10 @@ padding: 20px 0 0 60px;
 
 /*MD DEVICE*/
 @media only screen and (min-width: 768px){
-
+   #contenido{
+      padding-top: 8%;
+      position: static;
+   }
 }
 
 /*LG DEVICE*/
@@ -277,5 +256,4 @@ padding: 20px 0 0 60px;
       padding-top: 8%;
       position: static;
    }
->>>>>>> Stashed changes
 }
