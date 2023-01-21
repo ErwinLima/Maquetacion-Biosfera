@@ -5,9 +5,9 @@
     <div id="contenido">
         <div id="formBody">
             <h2>Registro de cuenta</h2>
-            <form action="datos" method="POST">    
+            <form action="datos" method="POST">
                 <div id="formContent">
-                    <div id="formulario" >
+                    <div id="formulario">
                         <div class="formItem">
                             <label for="fname">Nombre</label><br>
                             <input type="text" id="fname" name="username"><br>
@@ -31,14 +31,15 @@
                         <div class="formItem">
                             <label for="password">Repetir Contraseña</label><br>
                             <input type="password" id="password" name="password2"><br>
-                        </div>                           
+                        </div>
                     </div>
-                    <button type="submit"  class="button" id="registrate">Registrate</button>                                               
-                </div>        
+                    <button type="submit" class="button" id="registrate">Registrate</button>
+                </div>
             </form>
 
-        </div>       
-    
+        </div>
+
+
     </div>
-        <script src="vistas/js/main.js"></script>
+    <script src="vistas/js/main.js"></script>
 </body>

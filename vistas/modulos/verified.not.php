@@ -6,8 +6,8 @@
         <div id="formBody">
             <h2>Sus datos no se pudieron mandar correctamente</h2>
             <h3>Puede cerrar la pestaña</h3>
-        </div>       
-    
+        </div>
+
     </div>
-        <script src="vistas/js/main.js"></script>
+    <script src="vistas/js/main.js"></script>
 </body>
