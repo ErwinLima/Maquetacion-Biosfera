@@ -28,6 +28,7 @@ body {
 
 #social-sidebar li:first-child a {
    border-top-right-radius: 5px;
+   
 }
 
 #social-sidebar li:last-child a {
@@ -36,11 +37,12 @@ body {
 
 #social-sidebar a {
    background: rgba(0, 0, 0, .7);
+
    color: #fff;
    text-decoration: none;
    display: block;
-   width: 50px;
-   font-size: 24px;
+   width: 30px;
+   font-size: 20px;
    line-height: 50px;
    position: relative;
    text-align: center;
@@ -103,6 +105,7 @@ body {
    opacity: 0;
    left: 100px;
 }
+
 
 .popup ul {
    list-style: none;
@@ -350,9 +353,47 @@ body {
 #registrate {
    width: 20%;
 }
+/*SUBMENUS*/
 
 .submenus-estaciones {
-   width: 100%;
+   margin:auto;
+   width: 500px;
    padding: 0.3rem;
    border-radius: 10px;
 }
+.submenus-nav-li-a{
+   padding: 0.5rem;
+   text-align: center;
+   font-size: larger;
+   width: 100%;
+
+}
+ul, ol{
+   list-style: none;
+}
+.submenus-nav li a {
+   text-decoration: none;
+   padding: 10px 15px;
+   display: block;
+}
+.submenus-nav li a:hover {
+   background-color: rgba(255, 255, 255, 0.7);
+   color: black;
+}
+.submenus-nav li ul {
+   /*display: ;*/
+   position: absolute;
+   min-width: 140px;
+}
+.submenus-nav li:hover > ul {
+   /*display: ;*/
+}
+.submenus-nav li ul li {
+   position: relative;
+}
+.submenus-nav li ul li ul {
+   right: -350px;
+   top: 0px;
+}
+
+/*SUBMENUS FINAL*/

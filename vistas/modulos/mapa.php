@@ -33,17 +33,17 @@ $conexion = new Conexion1();
         <span>Opciones</span>
       </a>
       <div class="submenus-estaciones">
-        <ul>
-          <li><a href="">Estacion 1</a>
+        <ul class="submenus-nav">
+          <li class="submenus-nav-li"><a class="submenus-nav-li-a" href="">Estacion 1</a>
             <ul>
-              <li><a href="">Temperatura</a></li>
-              <li><a href="">Humedad</a></li>
-              <li><a href="">Humedad Relativa</a></li>
-              <li><a href="">Velocidad del Viento</a></li>
+              <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
+              <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
+              <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
+              <li><a id="btnIcon" onclick="showPopup(direccion_viento)" class="submenus-nav-li-a" >Direccion del Viento</a></li>
             </ul>
           </li>
-          <li><a href="">Estacion 2</a></li>
-          <li><a href="">Estacion 3</a></li>
+          <li class="submenus-nav-li"><a href="">Estacion 2</a></li>
+          <li class="submenus-nav-li"><a href="">Estacion 3</a></li>
         </ul>
       </div>
     </li>
@@ -54,7 +54,7 @@ $conexion = new Conexion1();
     <ul>
       <?php //$clase->datosVentanaPrincipal('Temperatura') ?>
       <li>
-        <p> </p> <i class="fa-solid fa-temperature-three-quarters"></i> <?php echo ($conexion->datosVentanaPrincipal('Temperatura')); ?>°C
+        <i class="fa-solid fa-temperature-three-quarters"></i> <?php echo ($conexion->datosVentanaPrincipal('Temperatura')); ?>°C
       </li>
       <li><i class="fa-solid fa-cloud-rain"></i>
         <?php echo ($conexion->datosVentanaPrincipal('Humedad_porcentaje')); ?> %
@@ -70,7 +70,7 @@ $conexion = new Conexion1();
     </ul>
 
   </section>
-
+  <?php //seccion de popup?>
   <div class="contenedor">
     <div class="overlay" id="overlay">
       <div class="popup" id="popup">
@@ -97,6 +97,47 @@ $conexion = new Conexion1();
       </div>
     </div>
   </div>
+
+  <div class="contenedor">
+    <div class="overlay" id="overlay">
+      <div class="humedad_porcentaje popup" id="humedad_porcentaje">
+        <h3>Porcentaje de Humedad</h3>
+        <p> <?php echo ($conexion->datosVentanaPrincipal('Humedad_porcentaje')); ?>%</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <div class="overlay" id="overlay" >
+      <div class="velocidad_viento popup" id="velocidad_viento">
+        <h3>Velocidad del Viento</h3>
+        <p> <?php echo ($conexion->datosVentanaPrincipal('Velocidad_viento')); ?> KM/H</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <div class="overlay" id="overlay">
+      <div class="direccion_viento popup" id="direccion_viento">
+        <h3>Direccion del Viento</h3>
+        <p> <?php echo ($conexion->datosVentanaPrincipal('Direccion_viento')); ?></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <div class="overlay" id="overlay">
+      <div class="temperatura popup" id="temperatura">
+        <h3>Temperatura</h3>
+        <p> <?php echo ($conexion->datosVentanaPrincipal('Temperatura')); ?>°C</p>
+      </div>
+    </div>
+  </div>
+
+
+
+<?php //termina seccion popups?>
+
   <div id="mapa_div">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15403.393733429206!2d-89.67544292033391!3d15.166666280273581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f618cfeb35cd9bf%3A0x5b11e2e2db4acef0!2sSierra%20de%20las%20Minas!5e0!3m2!1ses-419!2sgt!4v1671550207910!5m2!1ses-419!2sgt"
