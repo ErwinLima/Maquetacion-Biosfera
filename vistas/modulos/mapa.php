@@ -27,11 +27,14 @@ $conexion = new Conexion1();
         <span>Clima</span>
       </a>
     </li>
-    <li>
-      <a href="#">
+   <li>
+   <a href="#">
         <i class="fa-solid fa-layer-group"></i>
         <span>Opciones</span>
       </a>
+   </li>
+</ul>
+    <li style="position:absolute;">
       <div class="submenus-estaciones">
         <ul class="submenus-nav">
           <li class="submenus-nav-li"><a class="submenus-nav-li-a" href="">Estacion 1</a>
@@ -42,12 +45,26 @@ $conexion = new Conexion1();
               <li><a id="btnIcon" onclick="showPopup(direccion_viento)" class="submenus-nav-li-a" >Direccion del Viento</a></li>
             </ul>
           </li>
-          <li class="submenus-nav-li"><a href="">Estacion 2</a></li>
-          <li class="submenus-nav-li"><a href="">Estacion 3</a></li>
+          <li class="submenus-nav-li"><a href="">Estacion 2</a>
+          <ul>
+              <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
+              <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
+              <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
+              <li><a id="btnIcon" onclick="showPopup(direccion_viento)" class="submenus-nav-li-a" >Direccion del Viento</a></li>
+            </ul>
+        </li>
+          <li class="submenus-nav-li"><a href="">Estacion 3</a>
+          <ul>
+              <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
+              <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
+              <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
+              <li><a id="btnIcon" onclick="showPopup(direccion_viento)" class="submenus-nav-li-a" >Direccion del Viento</a></li>
+            </ul>
+        </li>
         </ul>
       </div>
     </li>
-  </ul>
+ 
 
   <section id="datos-actuales">
     <h1>Datos Actuales</h1>

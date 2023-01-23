@@ -403,15 +403,15 @@ ul, ol{
    color: black;
 }
 .submenus-nav li ul {
-   /*display: ;*/
+   display: ;
    position: absolute;
    min-width: 140px;
 }
 .submenus-nav li:hover > ul {
-   /*display: ;*/
+   display: block;
 }
 .submenus-nav li ul li {
-   position: relative;
+   position: ;
 }
 .submenus-nav li ul li ul {
    right: -350px;
