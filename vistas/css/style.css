@@ -297,31 +297,41 @@ body {
    background-size: cover;
 }
 
-#contenido {
-   padding-top: 3%;
+#contenido{
+   display: flex;
+   padding-top: 8%;
+   justify-content: center;
+}
+
+#f1{
+   width: 100%;
 }
 
 #formBody {
    background: rgba(0, 0, 0, 0.3);
    display: flex;
-   flex-direction: column;
-   justify-content: center;
+   flex-direction: column;   
    align-items: center;
-   margin: 0 15em;
-   border-radius: 30px;
-   padding-bottom: 20px;
+   width: 65%;
+   border-radius: 30px; 
+   padding-bottom: 20px;  
 }
 
 #formBody h2 {
    color: white;
 }
 
-#formulario {
+#f1{   
+}
+
+#formulario {   
    color: white;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
-   column-gap: 10rem;
+   column-gap: 10%;   
    grid-auto-rows: minmax(100px, auto);
+   width: 100%;
+   padding-left: 1.5%;
 }
 
 #registrate {
@@ -330,8 +340,20 @@ body {
    cursor: pointer;
 }
 
-.formItem input {
-   width: 20rem;
+.formItem input{
+   width: 94%;
+}
+
+#formContent{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+
+#info{
+   position: fixed;
+   bottom: 1%;
 }
 
 #formContent {
@@ -397,3 +419,73 @@ ul, ol{
 }
 
 /*SUBMENUS FINAL*/
+#registrate{
+   width: fit-content;
+}
+
+/*XS DEVICE - PORTRAIT*/
+@media only screen and (max-width: 600px) {
+
+   #logo{
+      width: 75%;
+   }
+
+   #logo img {
+      padding: 20px 0 0 50px;
+      width: 65%;
+   }
+
+   #formBody{
+      width: 80%;
+   }
+
+   #formulario{      
+      display: flex;
+      flex-direction: column;      
+      align-items: center;
+      padding-bottom: 5%;
+   }
+
+   #contenido{
+      padding: 0;
+      position: relative;
+      top: 5%;
+   }
+
+   .formItem{
+      padding-bottom: 5%;
+   }
+}
+
+/*SM DEVICE*/
+@media only screen and (min-width: 600px){
+   #logo{
+      width: 50%;
+   }
+
+   #contenido{
+      padding-top: 0%;
+      position: relative;
+      top: 15%;
+   }
+}
+
+/*MD DEVICE*/
+@media only screen and (min-width: 768px){
+   #contenido{
+      padding-top: 8%;
+      position: static;
+   }
+}
+
+/*LG DEVICE*/
+@media only screen and (min-width: 992px){
+   #logo{
+      width: 30%;
+   }
+
+   #contenido{
+      padding-top: 2.5%;
+      position: static;
+   }
+}
