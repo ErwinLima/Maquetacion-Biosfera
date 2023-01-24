@@ -49,6 +49,10 @@ body {
    cursor: pointer;
 }
 
+#social-sidebar a:hover {
+   background-color: rgba(216, 163, 27, 0.7)
+}
+
 #social-sidebar a:hover span {
    left: 120%;
    opacity: 1;
@@ -84,6 +88,7 @@ body {
    justify-content: right;
    display: flex;
    visibility: hidden;
+   height: 350px;
 }
 
 .overlay.active {
@@ -226,7 +231,7 @@ body {
    color: #fff;
    text-decoration: none;
    display: block;
-   height: 50%;
+   height: 36%;
    width: 250px;
    font-size: 14px;
    line-height: 50px;
@@ -384,14 +389,29 @@ body {
    border-radius: 10px;
 }
 .submenus-nav-li-a{
-   padding: 0.5rem;
    text-align: center;
-   font-size: larger;
-   width: 100%;
-
+   font-size: inherit;
+   width: 60%;
+   color: #fff;
 }
 ul, ol{
    list-style: none;
+}
+.submenus-nav {
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
+   border-radius: 15px;
+   width: 153px;
+}
+.submenus-li-a-modos{
+   position:absolute;
+   bottom: 344px;
+   left: 31px;
+}
+.submenus-nav-li-a-menu{
+   left: 200px;
+   background-color: rgba(0, 0, 0, 0.7);
+   border-radius: 15px;
 }
 .submenus-nav li a {
    text-decoration: none;
@@ -403,16 +423,16 @@ ul, ol{
    color: black;
 }
 .submenus-nav li ul {
-   display: ;
+   /*display: ;*/
    position: absolute;
    min-width: 140px;
 }
 .submenus-nav li:hover > ul {
    display: block;
 }
-.submenus-nav li ul li {
+/*.submenus-nav li ul li {
    position: ;
-}
+}*/
 .submenus-nav li ul li ul {
    right: -350px;
    top: 0px;
