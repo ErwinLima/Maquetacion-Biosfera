@@ -443,6 +443,33 @@ ul, ol{
    width: fit-content;
 }
 
+
+@media only screen and (min-width: 480px){
+   .submenus-opciones{
+      position:absolute;
+      bottom: 320px;
+      left: 31px;
+   }
+   .submenus-nav-menu-2{
+      width: 30%;
+   }
+   #submenuEstaciones1{
+      bottom: 90px;
+   }
+   #submenuEstaciones2{
+   top: -100px;
+   }
+   .overlay{
+   right: 15%;
+   bottom: 75px;
+   height: 470px;
+   }
+   .popup{
+   height: auto;
+   }
+}
+
+
 /*XS DEVICE - PORTRAIT*/
 @media only screen and (max-width: 600px) {
 

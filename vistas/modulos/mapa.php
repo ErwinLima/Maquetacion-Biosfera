@@ -62,7 +62,7 @@ $conexion = new Conexion1();
       <div class="submenus-estaciones" id="submenuEstacionesGeneral" style="visibility: hidden;" >
         <ul class="submenus-nav">
           <li class="submenus-nav-li"><a class="submenus-nav-li-a" >Estacion 1</a>
-            <ul id="submenuEstaciones1" class="submenus-nav-menu-2" style="bottom: 90px;">
+            <ul id="submenuEstaciones1" class="submenus-nav-menu-2" style="bottom: 0px;">
               <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
               <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
               <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
@@ -70,7 +70,7 @@ $conexion = new Conexion1();
             </ul>
           </li>
           <li class="submenus-nav-li"><a class="submenus-nav-li-a" onclick="showPopup(submenuEstaciones2)" >Estacion 2</a>
-          <ul id="submenuEstaciones2" class="submenus-nav-menu-2" style="top: 76px;">
+          <ul id="submenuEstaciones2" class="submenus-nav-menu-2" style="top: -25px; ">
               <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
               <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
               <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
