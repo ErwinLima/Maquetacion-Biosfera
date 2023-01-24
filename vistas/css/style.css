@@ -460,13 +460,23 @@ ul, ol{
    top: -100px;
    }
    .overlay{
-   right: 15%;
+   right: 21%;
    bottom: 75px;
    height: 470px;
    }
    .popup{
    height: auto;
    }
+   #datos-actuales{
+   bottom: 95px;
+   line-height: 39px;
+   left: 60px;
+   height: 31%;
+   }
+   #info{
+   bottom: 12%;
+   }
+   
 }
 
 
