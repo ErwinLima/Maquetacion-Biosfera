@@ -112,7 +112,7 @@ $conexion = new Conexion1();
 
             <a class="enlace" href="#">¿Olvidaste tu contraseña?</a>
             <input type="submit" class="btn-submit" value="ingresar">
-            <a class="enlace" href="#">¿No tienes cuenta?, Regístrate aquí</a>
+            <a class="enlace" href="registro">¿No tienes cuenta?, Regístrate aquí</a>
           </fieldset>
         </form>
       </div>
