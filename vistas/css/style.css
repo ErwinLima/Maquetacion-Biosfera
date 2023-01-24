@@ -12,7 +12,9 @@ body {
    scrollbar-width: none;
    overflow: hidden;
 }
-
+a{
+cursor: pointer;
+}
 #fa-solid {
    margin-right: 2rem;
 }
@@ -47,6 +49,10 @@ body {
    position: relative;
    text-align: center;
    cursor: pointer;
+}
+
+#social-sidebar a:hover {
+   background-color: rgba(216, 163, 27, 0.7)
 }
 
 #social-sidebar a:hover span {
@@ -84,6 +90,7 @@ body {
    justify-content: right;
    display: flex;
    visibility: hidden;
+   height: 350px;
 }
 
 .overlay.active {
@@ -226,7 +233,7 @@ body {
    color: #fff;
    text-decoration: none;
    display: block;
-   height: 50%;
+   height: 36%;
    width: 250px;
    font-size: 14px;
    line-height: 50px;
@@ -321,8 +328,8 @@ body {
    color: white;
 }
 
-#f1{   
-}
+/*#f1{   
+}*/
 
 #formulario {   
    color: white;
@@ -382,16 +389,36 @@ body {
    width: 500px;
    padding: 0.3rem;
    border-radius: 10px;
+   /*display: none;
+   position: absolute;*/
 }
+/*.submenus-opciones:hover > .submenus-estaciones{
+display: block;
+}*/
 .submenus-nav-li-a{
-   padding: 0.5rem;
    text-align: center;
-   font-size: larger;
-   width: 100%;
-
+   font-size: inherit;
+   width: 60%;
+   color: #fff;
 }
 ul, ol{
    list-style: none;
+}
+.submenus-nav {
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
+   border-radius: 15px;
+   width: 153px;
+}
+.submenus-opciones{
+   position:absolute;
+   bottom: 410px;
+   left: 31px;
+}
+.submenus-nav-menu-2{
+   left: 200px;
+   background-color: rgba(0, 0, 0, 0.7);
+   border-radius: 15px;
 }
 .submenus-nav li a {
    text-decoration: none;
@@ -403,19 +430,12 @@ ul, ol{
    color: black;
 }
 .submenus-nav li ul {
-   display: ;
+   display: none ;
    position: absolute;
    min-width: 140px;
 }
 .submenus-nav li:hover > ul {
    display: block;
-}
-.submenus-nav li ul li {
-   position: ;
-}
-.submenus-nav li ul li ul {
-   right: -350px;
-   top: 0px;
 }
 
 /*SUBMENUS FINAL*/

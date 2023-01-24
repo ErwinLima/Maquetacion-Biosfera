@@ -28,42 +28,13 @@ $conexion = new Conexion1();
       </a>
     </li>
    <li>
-   <a href="#">
-        <i class="fa-solid fa-layer-group"></i>
+   <a onclick="showPopup(submenuEstacionesGeneral)">
+        <i class="fa-solid fa-layer-group li-submenu-opciones"></i>
         <span>Opciones</span>
       </a>
    </li>
 </ul>
-    <li style="position:absolute;">
-      <div class="submenus-estaciones">
-        <ul class="submenus-nav">
-          <li class="submenus-nav-li"><a class="submenus-nav-li-a" href="">Estacion 1</a>
-            <ul>
-              <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
-              <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
-              <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
-              <li><a id="btnIcon" onclick="showPopup(direccion_viento)" class="submenus-nav-li-a" >Direccion del Viento</a></li>
-            </ul>
-          </li>
-          <li class="submenus-nav-li"><a href="">Estacion 2</a>
-          <ul>
-              <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
-              <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
-              <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
-              <li><a id="btnIcon" onclick="showPopup(direccion_viento)" class="submenus-nav-li-a" >Direccion del Viento</a></li>
-            </ul>
-        </li>
-          <li class="submenus-nav-li"><a href="">Estacion 3</a>
-          <ul>
-              <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
-              <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
-              <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
-              <li><a id="btnIcon" onclick="showPopup(direccion_viento)" class="submenus-nav-li-a" >Direccion del Viento</a></li>
-            </ul>
-        </li>
-        </ul>
-      </div>
-    </li>
+
  
 
   <section id="datos-actuales">
@@ -85,8 +56,41 @@ $conexion = new Conexion1();
         <?php echo ($conexion->datosVentanaPrincipal('Direccion_viento')); ?>
       </li>
     </ul>
-
   </section>
+
+  <li class="submenus-opciones" id="menuEstaciones1" >
+      <div class="submenus-estaciones" id="submenuEstacionesGeneral" style="visibility: hidden;" >
+        <ul class="submenus-nav">
+          <li class="submenus-nav-li"><a class="submenus-nav-li-a" >Estacion 1</a>
+            <ul id="submenuEstaciones1" class="submenus-nav-menu-2" style="bottom: 90px;">
+              <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
+              <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
+              <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
+              <li><a id="btnIcon" onclick="showPopup(direccion_viento)" class="submenus-nav-li-a" >Direccion del Viento</a></li>
+            </ul>
+          </li>
+          <li class="submenus-nav-li"><a class="submenus-nav-li-a" onclick="showPopup(submenuEstaciones2)" >Estacion 2</a>
+          <ul id="submenuEstaciones2" class="submenus-nav-menu-2" style="top: 76px;">
+              <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
+              <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
+              <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
+              <li><a id="btnIcon" onclick="showPopup(direccion_viento)" class="submenus-nav-li-a" >Direccion del Viento</a></li>
+            </ul>
+        </li>
+          <li class="submenus-nav-li"><a class="submenus-nav-li-a" onclick="showPopup(submenuEstaciones3)" >Estacion 3</a>
+          <ul id="submenuEstaciones3" class="submenus-nav-menu-2" style="top: 104px;">
+              <li><a id="btnIcon" onclick="showPopup(temperatura)" class="submenus-nav-li-a" >Temperatura</a></li>
+              <li><a id="btnIcon" onclick="showPopup(humedad_porcentaje)" class="submenus-nav-li-a" >Humedad</a></li>
+              <li><a id="btnIcon" onclick="showPopup(velocidad_viento)" class="submenus-nav-li-a" > Velocidad del Viento</a></li>
+              <li><a id="btnIcon" onclick="showPopup(direccion_viento)" class="submenus-nav-li-a" >Direccion del Viento</a></li>
+            </ul>
+        </li>
+        </ul>
+      </div>
+    </li>
+
+
+
   <?php //seccion de popup?>
   <div class="contenedor">
     <div class="overlay" id="overlay">
@@ -119,7 +123,10 @@ $conexion = new Conexion1();
     <div class="overlay" id="overlay">
       <div class="humedad_porcentaje popup" id="humedad_porcentaje">
         <h3>Porcentaje de Humedad</h3>
+        <p style="font-size:12px;">Ultimas 24 horas</p>
         <p> <?php echo ($conexion->datosVentanaPrincipal('Humedad_porcentaje')); ?>%</p>
+        <p style="font-size:12px;">Ultimas hora</p>
+        <p> <?php echo ($conexion->datosVentanaPrincipal('Velocidad_viento')); ?> KM/H</p>
       </div>
     </div>
   </div>
@@ -128,6 +135,9 @@ $conexion = new Conexion1();
     <div class="overlay" id="overlay" >
       <div class="velocidad_viento popup" id="velocidad_viento">
         <h3>Velocidad del Viento</h3>
+        <p style="font-size:12px;">Ultimas 24 horas</p>
+        <p> <?php echo ($conexion->datosVentanaPrincipal('Velocidad_viento')); ?> KM/H</p>
+        <p style="font-size:12px;">Ultimas hora</p>
         <p> <?php echo ($conexion->datosVentanaPrincipal('Velocidad_viento')); ?> KM/H</p>
       </div>
     </div>
@@ -137,6 +147,9 @@ $conexion = new Conexion1();
     <div class="overlay" id="overlay">
       <div class="direccion_viento popup" id="direccion_viento">
         <h3>Direccion del Viento</h3>
+        <p style="font-size:12px;">Ultimas 24 horas</p>
+        <p> <?php echo ($conexion->datosVentanaPrincipal('Direccion_viento')); ?></p>
+        <p style="font-size:12px;">Ultimas hora</p>
         <p> <?php echo ($conexion->datosVentanaPrincipal('Direccion_viento')); ?></p>
       </div>
     </div>
@@ -146,6 +159,9 @@ $conexion = new Conexion1();
     <div class="overlay" id="overlay">
       <div class="temperatura popup" id="temperatura">
         <h3>Temperatura</h3>
+        <p style="font-size:12px;">Ultimas 24 horas</p>
+        <p> <?php echo ($conexion->datosVentanaPrincipal('Temperatura')); ?>°C</p>
+        <p style="font-size:12px;">Ultimas hora</p>
         <p> <?php echo ($conexion->datosVentanaPrincipal('Temperatura')); ?>°C</p>
       </div>
     </div>
